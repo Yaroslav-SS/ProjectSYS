@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  html{
+    height: 100%;
+    width: 100%;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  header{ text-align: center;
+      border: 0.25px solid black;
+      width: 700px;
+      display:block;
+      margin: 0 auto;
+   }
+
+    .logout {   position: fixed;
+      top: 15px;
+      right: 320px;
+      letter-spacing: .1em;
+      z-index: 1;
+      }
+  
+      /*********************************
+
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*********************************
+2. Заголовок
+*********************************/
+h1 {
+  font-size: 26px;
+  font-weight: 500;
+  background-color: white;
+  text-align: center;
+  border: 1px solid;
+  line-height: 51px;
+  padding: 0 100px 0 100px;
+}
+
+
+/*********************************
+3. Навигация
+*********************************/
+
+.display-flex.padding-top-10 {
+  padding-right: 256px;
+}
+
+.padding-top-10 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.column-20 {
+  width: 20%;
+}
+
+.a-na-glavnuu {
+  padding-left: 20px;
+  padding-top: 10px;
+  margin-right: 10px;
+}
+
+.main-title-page {   
+  padding-left: 48px;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+/*********************************
+4. Таблица
+*********************************/
+
+table {
+  display: table;
+  border-spacing: 2px;
+  border-color: grey;
+}
+
+.table-main-info {
+  margin-left: 0px;
+  border-collapse: collapse;
+}
+
+.table-student-progress {
+  width: 322px;
+  margin-top: 20px;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.table-main-info th {
+  border: 1px solid #2C5E80;
+  padding: 30px 3px;
+  text-align: left;
+  font-size: 14px;
+  background-color: #c5c5cb;
+}
+
+th {
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+.table-main-info td {
+  border: 1px solid #2C5E80;
+  padding: 30px 3px;
+  font-size: 12px;
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+/*********************************
+5. Кнопки
+*********************************/
+
+.div-student-progress-select-semestr {
+  margin: 20px 0 0 50px;
+}
+
+
+.big-big-button {
+  margin-bottom: 20px;
+  min-width: 400px;
+  cursor: pointer;
+}
+
+.div-student-progress-select-semestr input {
+  padding: 4px 30px;
+  font-size: 15px;
+  background-color: #c5c5cb;
+  margin-right: 65px;
+}
+
+/*********************************
+6. Адаптивность
+*********************************/
+
+
+@media screen and (max-width: 1368px) { 
+  .display-flex{
+     flex-direction: column;
+     width: 100%;       
+  }
+  .column-20 {
+      display: flex;
+  }   
+  .main-title-page {
+      margin-top: 20px;       
+  }    
+}
+
+
+@media screen and (max-width: 960px) { 
+  .display-flex{
+     flex-direction: column;
+     width: 100%;       
+  }
+  .column-20 {
+      display: flex;
+  }   
+  .main-title-page {
+      margin-top: 20px;       
+  }    
+} 
+
+
+@media screen and (max-width: 768px) { 
+  .display-flex{
+     flex-direction: column;
+     width: 100%;       
+  }
+  .column-20 {
+      display: flex;       
+  }   
+  .main-title-page {
+      margin-top: 20px;       
+  }
+  
+}
+
+
+@media screen and (max-width: 480px) { 
+  .display-flex{
+     flex-direction: column;
+     width: 100%;       
+  }
+  .column-20 {
+      display: flex;        
+  }   
+  .main-title-page {
+      margin-top: 20px;       
+  }  
+
+}
+
+

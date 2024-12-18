@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  html{
+    height: 100%;
+    width: 100%;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  header{ text-align: center;
+      border: 0.25px solid black;
+      width: 700px;
+      display:block;
+      margin: 0 auto;
+   }
+
+    .logout {   position: fixed;
+      top: 15px;
+      right: 320px;
+      letter-spacing: .1em;
+      z-index: 1;
+      }
+ 
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*********************************
+2. Заголовок
+*********************************/
+h1 {
+    font-size: 26px;
+    font-weight: 500;
+    background-color: white;
+    text-align: center;
+    border: 1px solid;
+    line-height: 51px;
+    padding: 0 100px 0 100px;
+}
+
+/*********************************
+3. Кнопки
+*********************************/
+
+div.display-flex.start.padding-top-10 {
+    padding-right: 256px;
+}
+
+.padding-top-10 {
+    padding-top: 20px;
+}
+
+.start {
+    justify-content: start;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.column-20 {
+    width: 20%;
+}
+
+.a-na-glavnuu {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+div {
+    display: block;
+}
+
+.student-list-div {
+    padding-left: 48px;
+}
+
+.big-button {
+    min-width: 400px;
+}
+
+.small-button {
+    min-width: 280px;
+}
+
+.black-button {
+    margin: 0 25px 20px 0px;
+    height: 25px;
+    font-size: 16px;
+    min-height: 40px;
+    background-color: #c5c5cb;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+/*********************************
+4. Блок "Список студентов"
+*********************************/
+
+.display-flex {
+    display: flex;
+}
+
+
+
+.student-list-page {
+    font-weight: 600;
+    font-size: 19px;
+    padding-left: 0px;
+}
+
+div {
+    display: block;
+}
+
+.student-list-page{
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+/*********************************
+5. Таблица
+*********************************/
+
+.display-flex {
+    display: flex;
+}
+
+.start {
+    justify-content: start;
+}
+
+
+div {
+    display: block;
+}
+
+.table-main-info {
+    margin-left: 0px;
+    margin-top: 10px;
+    border-collapse: collapse;
+    width: 700px;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+table {
+    display: table;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.table-main-info th {
+    border: 1px solid #2C5E80;
+    padding: 30px 3px;
+    text-align: left;
+    font-size: 14px;
+    background-color: #c5c5cb;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+   }
+
+.table-main-info td {
+    border: 1px solid #2C5E80;
+    padding: 30px 3px;
+    font-size: 12px;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.column-10 {
+    width: 10%;
+}
+
+
+/*********************************
+6. Адаптивность
+*********************************/
+
+
+@media screen and (max-width: 1368px) { 
+    .display-flex{
+       flex-direction: column;
+       width: 100%;       
+    }
+    .column-20 {
+        display: flex;
+    }   
+    .main-title-page {
+        margin-top: 20px;       
+    }    
+}
+
+
+@media screen and (max-width: 960px) { 
+    .display-flex{
+       flex-direction: column;
+       width: 100%;       
+    }
+    .column-20 {
+        display: flex;
+    }   
+    .main-title-page {
+        margin-top: 20px;       
+    }    
+} 
+
+
+@media screen and (max-width: 768px) { 
+    .display-flex{
+       flex-direction: column;
+       width: 100%;       
+    }
+    .column-20 {
+        display: flex;       
+    }   
+    .main-title-page {
+        margin-top: 20px;       
+    }
+    
+    .mobile-div {
+        margin-top: 20px;
+    }
+    
+    .table-main-info{
+        margin-left: 15px;
+    }
+    
+    .student-list-div{
+        margin-top: 20px;
+    }
+    
+}
+
+
+@media screen and (max-width: 480px) { 
+    .display-flex{
+       flex-direction: column;
+       width: 100%;       
+    }
+    .column-20 {
+        display: flex;        
+    }   
+    .main-title-page {
+        margin-top: 20px;       
+    }
+    
+    .mobile-div {
+        margin-top: 20px;
+    }
+    
+    .table-main-info{
+        margin-left: 15px;
+    }
+    
+    .student-list-div{
+        margin-top: 20px;
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
