@@ -66,7 +66,7 @@
             <div class="display-flex start">
                 <form action="/student-modify" method="post">
                     <div CLASS="div-for-student-modifing">
-                        <input type="hidden" name="idM" value="${id}">
+                        <input type="hidden" name="idsToModify" value="${idsToModify}">
                         <div class="display-flex"><label>Фамилия</label><input name="surname" type="text" value="${student.surname}"></div>
                         <div class="display-flex"><label>Имя</label><input name="name" type="text" value="${student.name}"></div>
                         <div class="display-flex"><label>Группа</label><input name="group" type="text" value="${student.group}"></div>

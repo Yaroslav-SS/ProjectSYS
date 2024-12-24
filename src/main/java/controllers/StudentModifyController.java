@@ -58,8 +58,8 @@ public class StudentModifyController extends HttpServlet {
             return;
         }
 
-        req.setAttribute("idM", idsToModify);
-        List<Student> students = DBManager.getAllActiveStudents();
+        req.setAttribute("idsToModify", idsToModify);
+        List<Student> students = DBManager.getAllActiveStudents(); //array?
         for (Student student : students) {
             if (student.getId() == Integer.parseInt(idsToModify)) {
                 req.setAttribute("student", student);  //+s

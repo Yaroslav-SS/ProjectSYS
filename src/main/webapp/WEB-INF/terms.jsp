@@ -111,7 +111,7 @@
                             </c:if>
                         </form>
 
-                        <form action="/terms" method="post" id ="delete-term-form">
+                        <form action="/terms" method="post" id ="deleteTermForm">
                             <input type="hidden" name="idTermDelete" id="idTermDel" value="${selectedTerm.id}">
                             <c:if test="${role eq 'Администратор'}">
                             <div><input class="big-big-button" type="submit" value="Удалить выбранный семестр..." onclick="deleteTerms()"></div>

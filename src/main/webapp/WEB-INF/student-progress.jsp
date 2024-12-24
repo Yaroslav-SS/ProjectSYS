@@ -78,7 +78,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="display-flex start for-mobile-display-block">
-                <div class="column-20"></div>
+                <div class="column-10"></div>
                 <div>
                     <table class="table-main-info table-student-progress">
                         <tbody><tr>

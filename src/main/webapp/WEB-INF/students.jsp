@@ -42,12 +42,16 @@
 
                 <div class="student-list-div">
                     <div class="display-flex mobile-div">
-                        <div>
-                                <input class="black-button big-button" type="submit"
-                                       value="Просмотреть успеваемость выбранных студентов" onclick="studentProgress()">
-                        </div>
-                        <div>
 
+                        <div>
+                            <form action="/student-progress" method="get" id="studentProgressForm">
+                                <input type="hidden" id="studentProgressHidden" name="idStudProgress">
+                                <input type="submit" class="black-button big-button"
+                                       value="Просмотреть успеваемость выбранных студентов" onclick="studentProgress()">
+                            </form>
+                        </div>
+
+                        <div>
                             <form action="/students-create" method="get">
                                 <c:if test="${role eq 'Администратор'}">
                                     <input type="submit" class="black-button small-button" value="Создать студента">
@@ -59,20 +63,25 @@
 
                     <div class="display-flex mobile-div">
                         <div>
-                            <form action="/student-modify" method="get">
+                            <form action="/student-modify" method="get" id="selectedStudentIdForm">
+                                <input type="hidden" id="selectedStudentIdHidden" name="idsToModify">
                                 <c:if test="${role eq 'Администратор'}">
                                     <input type="submit" class="black-button big-button"
                                            value="Модифицировать выбранного студента" onclick="modifyStudent()">
                                 </c:if>
                             </form>
                         </div>
+
                         <div>
-                            <form action="/student-delete" method="post">
+                            <form action="/student-delete" method="post" id="deleteStudentForm">
+                                <input type="hidden" id="deleteStudentHidden" name="idStudent">
+
                                 <c:if test="${role eq 'Администратор'}">
 
-                                <input type="submit" class="black-button small-button"
-                                       value="Удалить выбранных студентов" onclick="deleteStudents()">
-                                   </c:if>
+                                    <input type="submit" class="black-button small-button"
+                                           value="Удалить выбранных студентов" onclick="deleteStudents()">
+                                </c:if>
+                            </form>
                         </div>
                     </div>
 
@@ -130,20 +139,6 @@
         </div>
     </div>
 </div>
-
-<form action="/student-delete" method="post" id="deleteStudentForm">
-    <input type="hidden" id="deleteStudentHidden" name="idStudent">
-
-</form>
-
-<form action="/student-progress" method="get" id="studentProgressForm">
-    <input type="hidden" id="studentProgressHidden" name="idStudProgress">
-
-</form>
-
-<form action="/student-modify" method="get" id="selectedStudentIdForm">
-  <input type="hidden" id="selectedStudentIdHidden" name="idsToModify">
-</form>
 
 </body>
 </html>

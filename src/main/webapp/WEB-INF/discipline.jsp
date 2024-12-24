@@ -83,20 +83,24 @@
                                 </form>
                             </div>
                             <div>
-                                <form action="/discipline-modify" method="get" id="discipline-modify-form">
-                                    <input type="hidden" name="disc-mod-name" id="modifyId">
+                                <form action="/discipline-modify" method="get" id="disciplineModifyForm">
+                                    <input type="hidden" name="discModNameHidden" id="modifyId">
 
                                     <c:if test="${role eq 'Администратор'}">
                                     <input type="submit" class="big-big-button"
                                            value="Модифицировать выбранную дисциплину..." onclick="modifyDiscipline()">
                                     </c:if>
                                 </form>
+
                             </div>
+                            <form action="/discipline-delete" method="post" id="deleteDisciplineForm">
+                                <input type="hidden" id="deleteDisciplineHidden" name="idDiscipline">
 
                             <c:if test="${role eq 'Администратор'}">
                             <div><input class="big-big-button" type="submit" value="Удалить выбранную дисциплину..."
                                         onclick="deleteDiscipline()"></div>
                             </c:if>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -105,10 +109,6 @@
     </div>
 </div>
 
-<form action="/discipline-delete" method="post" id="deleteDisciplineForm">
-    <input type="hidden" id="deleteDisciplineHidden" name="idDiscipline">
-
-</form>
 
 
 </body>

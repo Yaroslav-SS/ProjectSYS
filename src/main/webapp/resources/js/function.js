@@ -106,7 +106,7 @@ function modifyDiscipline() {
     var idSelected = checkedCheckboxes[0].value;
 
     document.getElementById("modifyId").value = idSelected;
-    document.getElementById('discipline-modify-form').submit();
+    document.getElementById('disciplineModifyForm').submit();
 }
 
 

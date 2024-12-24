@@ -14,7 +14,7 @@ public class DisciplineModifyController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String id = req.getParameter("disc-mod-name");
+        String id = req.getParameter("discModNameHidden");
         req.setAttribute("id", id);
         String disciplineName = DBManager.getDisciplineName(id);
         req.setAttribute("disciplineName", disciplineName);

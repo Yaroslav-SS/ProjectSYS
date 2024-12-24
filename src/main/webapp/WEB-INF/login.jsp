@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="../resources/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../resources/css/style.css">
     <title>Авторизация пользователя</title>
 <body>
 
 
 <main class="main">
-    <h1 class="main-heading-title"> система управления студентами и их успеваемостью
+    <h1 class="main-heading-title"> Авторизация пользователя
     </h1>
     <div class="beginning">
         <h2>
-            Введите логин, роль и пароль
+            Введите логин, пароль и роль.
         </h2>
         <br>
         <form action="/login" method="post">
@@ -32,7 +33,7 @@
             <input type="text" name="password">
             <br>
             <br>
-            <p>Роль :</p>
+            <p>Роль: </p>
             <select name="role" >
                 <option style="font-family: Sylfaen; font-size: 10pt;">Администратор</option>
                 <option style="font-family: Sylfaen; font-size: 10pt;">Студент</option>
