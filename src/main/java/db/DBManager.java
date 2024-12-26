@@ -19,8 +19,7 @@ public class DBManager {
         ArrayList<Student> students = new ArrayList<>();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
-            // Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("select * from students where status = '1'");
 
@@ -44,7 +43,7 @@ public class DBManager {
         ArrayList<Term> terms = new ArrayList<>();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("select * from terms where status = '1'");
 
@@ -66,7 +65,7 @@ public class DBManager {
         ArrayList<Mark> marks = new ArrayList<>();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("select m.id as id_mark, m.mark, d.id as id_disc, d.discipline from marks as m\n" +
                     "left join terms_disciplines as td on m.id_term_discipline = td.id\n" +
@@ -96,7 +95,7 @@ public class DBManager {
         ArrayList<Student> students = new ArrayList<>();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("select * from students where id = '" + id + "'");
 
@@ -119,7 +118,7 @@ public class DBManager {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM users where login = '" + login + "' and password = '" + password + "' and role = '" + role + "'");
 
@@ -135,7 +134,7 @@ public class DBManager {
     public static void createStudent(String surname, String name, String group, String date) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             stmt.execute("INSERT INTO `students` (`surname`, `name`, `groupe`, `data`) VALUES ('" + surname + "', '" + name + "', '" + group + "', '" + date + "');\n");
 
@@ -147,7 +146,7 @@ public class DBManager {
     public static void deleteStudent(String id) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             stmt.execute("UPDATE `students` SET `status` = '0' WHERE (`id` = '" + id + "');");
 
@@ -162,7 +161,7 @@ public class DBManager {
         ArrayList<Discipline> disciplines = new ArrayList<>();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");// подтягивает драйвер внутрь приложения для подсоединения
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024"); //объект соединения вызывает метод соединения.
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994"); //объект соединения вызывает метод соединения.
             Statement stmt = conn.createStatement(); // Statement создание чистого листа/запроса в mysql ,где теперь у соединения вызываем метод "создай запрос" который пока пуст
             ResultSet rs = stmt.executeQuery("select * from disciplines where status = '1'");
 
@@ -185,7 +184,7 @@ public class DBManager {
     public static void createDiscipline(String discipline) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
 
             Statement stmt = conn.createStatement();
             stmt.execute("INSERT INTO `disciplines` (`discipline`) VALUES ('" + discipline + "');"); //
@@ -198,7 +197,7 @@ public class DBManager {
     public static void deleteDiscipline(String id) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
 
             Statement stmt = conn.createStatement();
             stmt.execute("UPDATE `disciplines` SET `status` = '0' WHERE (`id` = '" + id + "');"); //
@@ -212,7 +211,7 @@ public class DBManager {
         double result = 0;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
 
             Statement statement = conn.createStatement();
             ResultSet rs = statement.executeQuery(
@@ -254,7 +253,7 @@ public class DBManager {
     public static void modifyStudent(String surname, String name, String group, String date, String id) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             stmt.execute(
             "UPDATE `students` SET `surname` = '" + surname + "',`name` = '" + name + "',  `groupe` = '" + group + "', `data` = '" + date + "' WHERE (`id` = '" + id + "')");
@@ -268,7 +267,7 @@ public class DBManager {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM terms_disciplines " +
                     "left join disciplines ON terms_disciplines.id_disciplines = disciplines.id" +
@@ -290,7 +289,7 @@ public class DBManager {
     public static Term getTermById(String idTerm) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM terms where id = " + idTerm);
 
@@ -339,7 +338,7 @@ public class DBManager {
         String durationResult = duration1+wordWeek;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             stmt.execute("DELETE FROM `terms_disciplines` WHERE (`id_term` = '" + id + "')");
             if (modifiedDisciplinesId != null) {
@@ -357,7 +356,7 @@ public class DBManager {
     public static void createTerm(String duration, String[] disciplines) {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             ResultSet resultSet = stmt.executeQuery("SELECT id,  term_name FROM terms ORDER BY ID DESC limit 1");
             String currentTerm = null;
@@ -390,7 +389,7 @@ public class DBManager {
     public static void deleteTerm(String idTermDelete) {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             stmt.execute("UPDATE `terms` SET `status` = '0' WHERE (`id` = '" + idTermDelete + "');");
 
@@ -403,7 +402,7 @@ public class DBManager {
         String name = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("select discipline from disciplines where id =" + id + "");
 
@@ -420,7 +419,7 @@ public class DBManager {
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root&password={jhjibqujl2024");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students_44?user=root19&password=root19011994");
             Statement stmt = conn.createStatement();
             stmt.execute("UPDATE `disciplines` SET `discipline` = '" + modifiedDiscipline + "' WHERE (`id` = '" + id + "')");
 

@@ -32,7 +32,7 @@
 <div class="logout">
   <c:choose>
     <c:when test="${role eq null}">
-      <a href="/login" >Logout</a>
+      <a href="/login" >Login</a>
     </c:when>
     <c:otherwise>
       <a href="/logout" >Logout, ${login}</a>

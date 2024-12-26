@@ -19,7 +19,14 @@
 <body>
 <br><br><br>
 <div class="logout">
-  <a href="">Logout</a>
+  <c:choose>
+    <c:when test="${role eq null}">
+      <a href="/login">Login</a>
+    </c:when>
+    <c:otherwise>
+      <a href="/logout">Logout, ${login}</a>
+    </c:otherwise>
+  </c:choose>
 </div>
 <div class="container">
   <div class="row">
